@@ -1,0 +1,355 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to top right, #ffe5ec, #ffc1cc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
+.card-page .envelope {
+    position: relative;
+    width: 90%;
+    max-width: 350px;
+    height: 200px;
+    background: #fff;
+    border: 2px solid #e91e63;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+
+.envelope .flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid #e91e63;
+}
+
+.envelope .letter {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.letter h1 {
+    font-size: 1.5em;
+    color: #e91e63;
+}
+
+.letter p {
+    font-size: 1em;
+    margin: 15px 0;
+}
+
+.letter button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.letter button:hover {
+    background-color: #e91e63;
+}
+
+.gift-page {
+    flex-direction: column;
+    text-align: center;
+}
+
+.gift-container h1 {
+    color: #d81b60;
+    font-size: 2em;
+}
+
+.intro-text {
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: #444;
+}
+
+.cake {
+    position: relative;
+    margin: 40px auto;
+    margin-top: 80px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.plate {
+    width: 160px;
+    height: 20px;
+    background: #d3d3d3;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+}
+
+.layer {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background: pink;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 3px #ccc;
+}
+
+.layer-middle {
+    background: #ff8fa3;
+    margin-top: -5px;
+}
+
+.layer-top {
+    background: #ffb6c1;
+    margin-top: -5px;
+}
+
+.candle {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 40px;
+    background: #f1c40f;
+    border-radius: 3px;
+}
+
+.flame {
+    width: 15px;
+    height: 15px;
+    background: orange;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flicker 0.3s infinite alternate;
+}
+
+@keyframes flicker {
+    0% {
+        transform: translateX(-50%) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1.2);
+        opacity: 0.8;
+    }
+}
+
+.hint {
+    font-size: 1em;
+    color: #d81b60;
+    animation: blink 1s infinite;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+.wish {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #555;
+    max-width: 500px;
+    padding: 0 20px;
+}
+
+.cake-decoration {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 2;
+}
+
+.cream {
+    width: 100%;
+    height: 20px;
+    background: white;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sprinkles {
+    position: relative;
+    top: -5px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px;
+    gap: 4px;
+}
+
+.sprinkles span {
+    width: 5px;
+    height: 10px;
+    border-radius: 2px;
+    display: inline-block;
+    background-color: red;
+    transform: rotate(45deg);
+    animation: sprinkleDrop 0.4s ease-out;
+}
+
+.sprinkles span:nth-child(2) {
+    background-color: blue;
+}
+
+.sprinkles span:nth-child(3) {
+    background-color: yellow;
+}
+
+.sprinkles span:nth-child(4) {
+    background-color: green;
+}
+
+.sprinkles span:nth-child(5) {
+    background-color: orange;
+}
+
+.sprinkles span:nth-child(6) {
+    background-color: pink;
+}
+
+.sprinkles span:nth-child(7) {
+    background-color: purple;
+}
+
+.sprinkles span:nth-child(8) {
+    background-color: cyan;
+}
+
+.sprinkles span:nth-child(9) {
+    background-color: magenta;
+}
+
+.sprinkles span:nth-child(10) {
+    background-color: lime;
+}
+
+@keyframes sprinkleDrop {
+    from {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0) rotate(45deg);
+        opacity: 1;
+    }
+}
+
+#sparkle-container {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.sparkle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    animation: sparkle 1s ease-out forwards;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+#confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+    }
+
+    .letter h1 {
+        font-size: 1.2em;
+    }
+
+    .letter p {
+        font-size: 0.95em;
+    }
+
+    .letter button {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .gift-container h1 {
+        font-size: 1.5em;
+    }
+
+    .wish {
+        font-size: 1em;
+    }
+
+    .cake {
+        width: 120px;
+    }
+
+    .layer, .plate {
+        width: 120px;
+    }
+
+    .plate {
+        width: 130px;
+        left: -5px;
+    }
+}

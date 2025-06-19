@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <title>Hadiah Ulang Tahun</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gift-page">
+    <div class="gift-container">
+        <h1>Selamat Ulang Tahun Dek Alya!!! 🎂💕</h1>
+        <div class="cake" onclick="blowCandle()">
+            <div class="plate"></div>
+            <div class="layer layer-bottom"></div>
+            <div class="layer layer-middle"></div>
+            <div class="layer layer-top"></div>
+            <div class="candle">
+                <div class="flame" id="flame"></div>
+            </div>
+            <div class="cake-decoration" id="decoration" style="display: none;">
+                <div class="cream"></div>
+                <div class="sprinkles">
+                    <span></span><span></span><span></span><span></span><span></span>
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+        <p class="hint" id="hint">🔥 Klik apinya dek untuk meniup lilinya🥳</p>
+        <div id="sparkle-container"></div>
+        <p class="wish" id="wish" style="display: none;"></p>
+        <canvas id="confetti"></canvas>
+        <audio id="celebrate-audio" src="celebrate.mp3" preload="auto"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
